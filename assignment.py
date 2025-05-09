@@ -76,15 +76,12 @@ def count_repeats(string):
     >>> count_repeats("aeiou")
     0
     """
-    count = {}
-    result = 0
-    for x in string:
-        count[x] = count.get(x,0) + 1
-    for val in count.values():
-        if val > 1:
-            return val
+    count = 0
+    for letter in string:
+        if string.count(letter) > 1:
+            count += 1
 
-    return result
+    return count
 
 
 if __name__ == "__main__":
